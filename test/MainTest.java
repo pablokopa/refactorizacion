@@ -1,3 +1,4 @@
+import com.dam.refactor.Main;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

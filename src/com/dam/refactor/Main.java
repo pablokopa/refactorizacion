@@ -1,7 +1,17 @@
 package com.dam.refactor;
 
+/** Clase que compara las puntuaciones de dos jugadores en un partido de tenis.
+ *
+ * @author Pablo
+ * @version 1.0
+ */
 public class Main {
-    /* Método para devolver la puntuacion de tenis */
+    /** Método que devuelve la puntuacion de dos jugadores en un partido de tenis.
+     *
+     * @param puntuacionJugador1	Puntos del jugador 1
+     * @param puntuacionJugador2	Puntos del jugador 2
+     * @return	Resultado final
+     */
     public static String getScore(int puntuacionJugador1, int puntuacionJugador2) {
         String puntuacion = "";
 
@@ -41,13 +51,13 @@ public class Main {
         /* Compara puntuaciones en los casos de puntuaciones distintas a empate o ventaja*/
         else
         {
-            int puntuacionTemporal = 0;
+            int puntuacionAuxiliar = 0;
             for (int i=1; i<3; i++)
             {
-                if (i==1) puntuacionTemporal = puntuacionJugador1;
-                else { puntuacion+="-"; puntuacionTemporal = puntuacionJugador2;
+                if (i==1) puntuacionAuxiliar = puntuacionJugador1;
+                else { puntuacion+="-"; puntuacionAuxiliar = puntuacionJugador2;
                 }
-                switch(puntuacionTemporal)
+                switch(puntuacionAuxiliar)
                 {
                     case 0:
                         puntuacion+="Love";
@@ -65,6 +75,6 @@ public class Main {
             }
 
         }
-    return puntuacion; // Devuelve la puntuacion
+    return puntuacion; // Devuelve la puntuacion final
     }
 }
